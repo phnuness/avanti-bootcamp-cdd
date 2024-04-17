@@ -1,6 +1,6 @@
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.4.0
+    rev: v4.6.0
     hooks:
       - id: check-ast
       - id: check-byte-order-marker
@@ -18,24 +18,24 @@ repos:
       - id: check-added-large-files
 
 -   repo: https://github.com/psf/black
-    rev: 22.1.0
+    rev: 24.4.0
     hooks:
       - id: black
         args: ['--line-length=79']
         files: '(\.pyi?|wscript|ipynb)$'
         language_version: python3
         additional_dependencies: [black-nb]
--   repo: https://github.com/pre-commit/mirrors-isort
-    rev: v5.4.2
+-   repo: https://github.com/PyCQA/isort
+    rev: 5.13.2
     hooks:
       - id: isort
 -   repo: https://github.com/asottile/pyupgrade
-    rev: v2.7.2
+    rev: v3.15.2
     hooks:
       - id: pyupgrade
         args: [--py36-plus]
--   repo: https://gitlab.com/pycqa/flake8
-    rev: '3.8.3'
+-   repo: https://github.com/PyCQA/flake8
+    rev: '7.0.0'
     hooks:
       - id: flake8
 -   repo: https://github.com/GussSoares/create-requirements
@@ -43,7 +43,7 @@ repos:
     hooks:
       - id: create-requirements
 -   repo: https://github.com/compilerla/conventional-pre-commit
-    rev: 'v1.2.0'
+    rev: 'v3.2.0'
     hooks:
       - id: conventional-pre-commit
         stages: [commit-msg]
